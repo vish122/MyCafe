@@ -1,0 +1,22 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io"  }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io"  }
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MyCafe"
+include ':app'
